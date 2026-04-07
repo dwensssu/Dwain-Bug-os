@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dwain Bug-os — Web System Developer Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- DARK MODE -->
+  <button id="darkModeToggle" title="Toggle dark mode">
+    <span id="modeIcon">☀</span>
+  </button>
+
+  
+  <!-- STICKY NAVIGATION -->
+  <nav id="mainNav">
+    <div class="nav-inner">
+      <span class="nav-brand">Dwensu</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="hireBtn" class="hire-btn">Hire Me ✦</button>
+    </div>
+  </nav>
+
+  <!-- ABOUT -->
+  <section id="about" class="section hero-section">
+    <div class="hero-grid">
+      <div class="hero-photo-wrap">
+        <img
+          src="assets/profile_pic.jpg"
+          alt="Errol Dwain Bug-os hala na daot"
+          class="profile-photo"
+          id="profilePhoto"
+        />
+        <div class="photo-ring"></div>
+      </div>
+      <div class="hero-text">
+        <p class="greeting" id="greetingLine">Greetings! This is my resume</p>
+        <h1 class="hero-name">Errol Dwain L. Bug-os</h1>
+        <p class="hero-title">Web Systems Developer & Visual Designer</p>
+        <p class="hero-summary">
+          I create high-quality digital tools, from the visual design to the technical systems behind them. 
+          I am currently looking for full-time work or new projects.
+        </p>
+        <div class="hero-actions">
+          <button id="downloadBtn" class="btn-primary">⬇ Download Resume</button>
+        </div>
+        <div class="hero-chips">
+          <span class="chip">📍 Cagayan de Oro City, Philippines</span>
+          <span class="chip">💼 Full time Work</span>
+          <span class="chip">🌐 Remote-Ready</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Education</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024 – 2027</span>
+            <h3>Bachelor of Science in Information Technology</h3>
+            <p class="timeline-school">University of Science and Technology of Southern Philippines – USTP</p>
+            <ul class="timeline-bullets">
+              <li>Academic Excellence Awardee</li>
+              <li>University City Scholar Media Production Photographer</li>
+              <li>GWA 1.45 · Dean's Lister, 4 consecutive semesters</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2019 – 2021</span>
+            <h3>Senior High School — STEM Track</h3>
+            <p class="timeline-school">Capitol University</p>
+            <ul class="timeline-bullets">
+              <li>Academic Excellence Awardee</li>
+              <li>Crescendo Music Club Executive Member – Rhythm/Lead Guitarist &amp; Video Editor</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">Certifications</span>
+            <h3>Professional Certifications</h3>
+            <table class="cert-table">
+              <thead>
+                <tr><th>Certification</th><th>Issuer</th><th>Year</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>2nd Placer in Call of Duty Tournament</td><td>City Scholar Office</td><td>2024</td></tr>
+                <tr><td>Champion in Mobile Legends Tournament</td><td>City Scholar Office</td><td>2025</td></tr>
+                <tr><td>Google UX Design Certificate</td><td>Google / Coursera</td><td>2023</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section alt-section">
+    <div class="section-inner">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-toolbar">
+        <input type="text" id="skillSearch" placeholder="🔍  Filter skills…" />
+        <button id="animateSkillsBtn" class="btn-outline btn-sm">▶ Animate Bars</button>
+      </div>
+      <div id="skillsGrid" class="skills-grid">
+        <!-- JS will render skill bars here -->
+      </div>
+      <div id="noSkillsMsg" class="no-results" style="display:none">No matching skills found.</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Projects</h2>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="ui">UI/UX</button>
+      </div>
+      <div id="projectsGrid" class="projects-grid">
+
+
+        <!-- JS will render project cards here -->
+      </div>
+      <div class="more-wrap">
+        <button id="toggleMoreBtn" class="btn-outline">View More Projects ↓</button>
+        <div id="moreProjects" style="display:none">
+          <div class="projects-grid extra-projects" id="extraProjectsGrid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section alt-section">
+    <div class="section-inner contact-layout">
+      <div class="contact-left">
+        <h2 class="section-title">Contact</h2>
+        <p class="contact-intro">Have a project in mind or just want to say hi? Fill the form and I'll get back to you within 24 hours.</p>
+        <ul class="contact-info">
+          <li><span class="ci-icon">✉</span> erroldwain.bugos@email.com</li>
+          <li><span class="ci-icon">📞</span> +63 912 345 6789</li>
+          <li><span class="ci-icon">🔗</span> linkedin.com/in/dwainbugos</li>
+          <li><span class="ci-icon">🐙</span> github.com/dwensu</li>
+        </ul>
+      </div>
+      <div class="contact-right">
+        <div id="formFeedback" class="form-feedback" style="display:none"></div>
+        <div class="contact-form">
+          <div class="form-group">
+            <label for="fname">Name *</label>
+            <input type="text" id="fname" placeholder="Your full name" />
+          </div>
+          <div class="form-group">
+            <label for="femail">Email *</label>
+            <input type="email" id="femail" placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message *</label>
+            <textarea id="fmessage" rows="4" placeholder="Tell me about your project…"></textarea>
+          </div>
+          <button id="sendBtn" class="btn-primary full-width">Send Message ✦</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MESSAGE -->
+    <div id="messageLog" style="display:none">
+      <div class="msg-log-header">
+        <h3 class="msg-log-title">📬 Messages Received</h3>
+        <button id="clearLogBtn" class="btn-outline btn-sm">🗑 Clear All</button>
+      </div>
+      <div id="msgList"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>Crafted with ♥ by <strong>Errol Dwain Bug-os</strong> · <span id="footerYear"></span></p>
+    <p class="footer-sub">Built with vanilla HTML, CSS &amp; jQuery</p>
+  </footer>
+
+  <!-- HIRE ME POPUP -->
+  <div id="hireOverlay" class="overlay" style="display:none">
+    <div class="hire-panel">
+      <button id="closeHire" class="close-btn">✕</button>
+      <div class="hire-emoji">🚀</div>
+      <h2>Let's Work Together!</h2>
+      <p>I'm currently available for:</p>
+      <ul class="hire-list">
+        <li>✦ Full-time developer roles</li>
+        <li>✦ Freelance web projects</li>
+        <li>✦ UI/UX design consultations</li>
+        <li>✦ Code reviews &amp; mentoring</li>
+      </ul>
+      <p class="hire-cta-text">Reach me directly at <strong>erroldwain.bugos@email.com</strong> or scroll down to the contact form!</p>
+      <button id="hireGoContact" class="btn-primary full-width">Go to Contact Form</button>
+    </div>
+  </div>
+
+  <!-- jQuery CDN (before own script) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
